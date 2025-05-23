@@ -82,7 +82,7 @@ export const createBlog = async (req, res, next) => {
 
     const newBlog = {
       title,
-      author,
+      author: req.user.id,
       content,
       review, // Optional
     };
